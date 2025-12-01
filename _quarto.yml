@@ -1,0 +1,116 @@
+project:
+  type: website
+  output-dir: docs
+
+website:  
+  title: "Physica"
+  comments:
+    hypothesis: 
+      theme: classic # clean
+      openSidebar: false 
+  navbar:
+    background: MidnightBlue   # primary  # Navy 
+    search: true
+    left:
+      - href: index.qmd
+        text: Home
+      - about.qmd
+    tools:
+      - icon: feather   # https://icons.getbootstrap.com/
+        menu:
+          - text: SageMath
+            href:  https://cocalc.com/
+            target: "_blank"
+          - text: WolframAlpha
+            href:  https://www.wolframalpha.com/
+            target: "_blank"
+          - text: Datasette
+            href:  https://datasette.io/
+            target: "_blank"
+          - text: Mathcha
+            href:  https://www.mathcha.io/
+            target: "_blank"
+          - text: GeoGebra
+            href:  https://www.geogebra.org/
+            target: "_blank"
+          - text: Chemical Elements
+            href: https://ptable.com/?lang=en#Properties # https://periodic-table.rsc.org/
+            target: "_blank"
+  sidebar:
+    style: "floating"
+    search: true
+    contents:
+      - text: "Introduction"
+        href: introduction.qmd
+      - section: "Overview"
+        href: overview-summary.qmd
+        contents:
+          - text: "EconoPhys"
+            href: index.qmd
+          - text: "Static, Kinetic, Dynamic"
+            href: Mechanics.qmd
+          - text: "Lagrange-Hamilton"
+            href: Lagrange-Hamilton.qmd
+          - text: "Space Time Matter"
+            href: Space_Time_Matter.qmd
+          - text: "Degrees of Freedom"
+            href: dimensionfreedom.qmd
+          - text: "Movement & State"
+            href: Movement_State.qmd
+          - text: "Restrictions & Constraints, Boundries & Limitations"
+            href: limits.qmd  
+          - text: "Equilibrium & Laborsystem"
+            href: equilibrium.qmd
+          - text: "Work & Energy, Information"
+            href: Work_Energy.qmd
+          - text: "Force and Momenta"
+            href: momentum.qmd
+          - text: "Entropy & Enthalpy"
+            href: Entrorpy_Enthalpy.qmd
+          - text: "Symmetry & Conservation"
+            href: Symmetry_Conservation.qmd
+          - text: "Reversability"
+            href: Reversability.qmd
+          - text: "Refraction & Medium"
+            href: Refraction.qmd
+          - text: "Action & Path"
+            href: Action.qmd
+          - text: "Potentials"
+            href: Potentials.qmd
+          - text: "Renormalization"
+            href: Renormalization.qmd
+          - text: "Continum & Quantum"
+            href: continumquantum.qmd
+          - text: "Micro & Macro"
+            href: micromacro.qmd
+      - section: "Economical Models"
+        contents:
+          - section_2a.qmd
+          - section_2b.qmd
+          - section_2c.qmd
+      - section: section_3_advanced.qmd
+        contents:
+          - section_3a.qmd
+          - section_3b.qmd
+          - section_3c.qmd
+
+
+format:
+  html:
+    page-layout: article    # full  # custom
+    keep-tex: true
+#    include-in-header: 
+#      - text: \usepackage{mathtools, amsmath} 
+    respect-user-color-scheme: true
+    theme:
+      light: [Cerulean, theme-light.scss] 
+      dark: [Cerulean, theme-dark.scss]    # Morph  # Slate   # darkly
+#      - Cerulean
+#      - brand
+    css: styles.css
+    toc: true
+#    linkcolor: grey    # urlcolor: green
+
+
+
+
