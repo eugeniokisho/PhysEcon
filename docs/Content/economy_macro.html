@@ -595,23 +595,35 @@ window.Quarto = {
 
 <p>MACRO ECONOMY: Goods Market (Production, Lager), Capital Market (Savings, Investments), Labor Market (Employment, Population Structure), Price vs.&nbsp;Value, Demand vs.&nbsp;Supply, Access to Resources, Trade &amp; International Contracts</p>
 <p><span id="eq-eom3DOF"><span class="math display">\[\begin{split} &amp;
-Supply = C + S + T + M = E    \\&amp;
+Supply = C + S + T + M = E
+\end{split} \tag{1}\]</span></span></p>
+<p><span id="eq-eom3DOF"><span class="math display">\[\begin{split} &amp;
 E = W + E_B + E_P + E_H + E_N + T_B + E_G - Z_F + E_A
-\\&amp;
-Demand = C + I + G + X = P_I  \\&amp;
-P_I = C + G + A + I_L + X - M
-\\&amp;
-equilibrium: E = P_I       \\&amp;
+\end{split} \tag{2}\]</span></span></p>
+<p><span id="eq-eom3DOF"><span class="math display">\[\begin{split} &amp;
+Demand = C + I + G + X = V_I
+\end{split} \tag{3}\]</span></span></p>
+<p><span id="eq-eom3DOF"><span class="math display">\[\begin{split} &amp;
+V_I = C + G + A + I_L + X - M
+\end{split} \tag{4}\]</span></span></p>
+<p><span id="eq-eom3DOF"><span class="math display">\[\begin{split} &amp;
+Equilibrium: E = V_I       \\&amp;
 W - C = S = I        \\&amp;
 C + S = W        \\&amp;
-C + I = R        \\&amp;
-\\&amp;
-E + T_i - B + D = P_S    \\&amp;
-P_S = P_I + E_M - E_X    \\&amp;
-P_S - D = P_N = E + T_i - S   \\&amp;
-\\&amp;
-Q \cdot U = P_I \cdot V       \\&amp;
-\end{split} \tag{1}\]</span></span></p>
+C + I = R
+\end{split} \tag{5}\]</span></span></p>
+<p><span id="eq-eom3DOF"><span class="math display">\[\begin{split} &amp;
+E + T_i - B + D = V_S
+\end{split} \tag{6}\]</span></span></p>
+<p><span id="eq-eom3DOF"><span class="math display">\[\begin{split} &amp;
+V_S = V_I + E_M - E_X
+\end{split} \tag{7}\]</span></span></p>
+<p><span id="eq-eom3DOF"><span class="math display">\[\begin{split} &amp;
+V_S - D = V_N = E + T_i - S
+\end{split} \tag{8}\]</span></span></p>
+<p><span id="eq-eom3DOF"><span class="math display">\[\begin{split} &amp;
+P \cdot V_I = U \cdot Q
+\end{split} \tag{9}\]</span></span></p>
 <details>
 <summary>
 aronyms
@@ -632,7 +644,7 @@ td, th {
 <td><span class="math inline">\(S =\)</span> Savings</td>
 </tr>
 <tr class="even">
-<td><span class="math inline">\(I =\)</span> Invstments</td>
+<td><span class="math inline">\(I =\)</span> Investments</td>
 <td><span class="math inline">\(T =\)</span> Taxes</td>
 </tr>
 <tr class="odd">
@@ -649,15 +661,15 @@ td, th {
 </tr>
 <tr class="even">
 <td><span class="math inline">\(D =\)</span> Depreciations (Ersatzinvestitionen)</td>
-<td><span class="math inline">\(P_N =\)</span> Net Society Production of total Economy (NSP)</td>
+<td><span class="math inline">\(V_N =\)</span> Net Society Production of total Economy (NSP)</td>
 </tr>
 <tr class="odd">
-<td><span class="math inline">\(Q =\)</span> Money Quantity</td>
-<td><span class="math inline">\(U =\)</span> Umlaufsgeschwindigkeit</td>
+<td><span class="math inline">\(Q =\)</span> Money Quantity, “Mass <span class="math inline">\(m \cdot c_0\)</span>”</td>
+<td><span class="math inline">\(U =\)</span> Money Turnover Velocity (Umlaufgeschwindikeit), “Temperature T”</td>
 </tr>
 <tr class="even">
-<td><span class="math inline">\(P_I =\)</span> internal Producttivity, Handelsvoluemn = BIP = <span class="math inline">\(\frac{Output}{Input}\)</span></td>
-<td><span class="math inline">\(V =\)</span> Preisniveau (Inflation adjusted Value)</td>
+<td><span class="math inline">\(V_I =\)</span> Gross Domestic Product GDP = <span class="math inline">\(\frac{Output}{Input}\)</span>, “Volume V” (Handelsvoluemn = BIP)</td>
+<td><span class="math inline">\(P =\)</span> Preisniveau (Inflation adjusted Value), “Pressure P”</td>
 </tr>
 <tr class="odd">
 <td><span class="math inline">\(W =\)</span> Wages (Salaries, …)</td>
@@ -665,7 +677,7 @@ td, th {
 </tr>
 <tr class="even">
 <td><span class="math inline">\(E_B =\)</span> Income of priv. Companies/Budiness/Services</td>
-<td><span class="math inline">\(E_P =\)</span> Incomeo of priv. Capital (Interests, Coupns, Dividends, … of priv. Assets/Investmens/Credits/Debits)</td>
+<td><span class="math inline">\(E_P =\)</span> Income of priv. Capital (Interests, Coupons, Dividends, … of priv. Assets, Investmens, Credits, Debits, Bonds, Equity)</td>
 </tr>
 <tr class="odd">
 <td><span class="math inline">\(E_H =\)</span> Income of Real Estate (Interests of Rental Loans, Houses/Buildings)</td>
@@ -680,7 +692,7 @@ td, th {
 <td><span class="math inline">\(E_A =\)</span> Income of Social Insurence Capital/Assets and Services</td>
 </tr>
 <tr class="even">
-<td><span class="math inline">\(P_S =\)</span> Butto Sozial Produkt (BSP)</td>
+<td><span class="math inline">\(V_S =\)</span> Butto Sozial Produkt (BSP)</td>
 <td><span class="math inline">\(A =\)</span> Social Expenses</td>
 </tr>
 <tr class="odd">
@@ -689,7 +701,7 @@ td, th {
 </tr>
 <tr class="even">
 <td><span class="math inline">\(R_X\)</span> Capital Earnings and Wages to Abroad</td>
-<td><span class="math inline">\(U =\)</span> Money Turnover Speed (Umlaufgeschwindikeit)</td>
+<td>…</td>
 </tr>
 <tr class="odd">
 <td>…</td>
