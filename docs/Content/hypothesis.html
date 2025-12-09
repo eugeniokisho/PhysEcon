@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>economy_micro – PhysEcon</title>
+<title>hypothesis – PhysEcon</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -592,105 +592,61 @@ window.Quarto = {
 
 
 
-<p>MICRO ECONOMY: Supply, Demand, Equilibrium, Pricing, Elasticity, Utiliy, Production &amp; Cost, Labor, Aggregates …</p>
-<p>How individuals and companies make decisions to allocate scarce resources.</p>
-<p><span id="eq-eom3DOF"><span class="math display">\[\begin{split} &amp;
-A = Property Capital       \\&amp;
-= Liq. + Deb. + G\&amp;A + Stock + Mob. + Immob. + Intel.Prop.       \\&amp;
-L = Financial Capital = Cred. + Bondemissions + Equity       \\&amp;
-X = Expenses = Costs + Depreciations       \\&amp;
-I = Pricevalue $\cot$ Salesquantiy + Profit       \\&amp;
-Y = I - X = Profit      \\&amp;
-S = \frac{Credits + Bondemissions}{Equity}       \\&amp;
-D = ...       \\&amp;
-C = ...       \\&amp;
-E = ...       \\&amp;
-Q = Cash + shortterm Capital       \\&amp;
-G = ...       \\&amp;
-E_T = ...       \\&amp;
-E_D = ...       \\&amp;
-U = \frac{Output}{Input}        \\&amp;
-P = \frac{Gain}{Input}       \\&amp;
-R_E = \frac{Earning}{Equity}       \\&amp;
-R_I = \frac{Earning}{Investment}        \\&amp;
-R_A = \frac{Earning}{Capital}        \\&amp;
-F = ...       \\&amp;
-F_F = CF - Depreciations - Amortisations       \\&amp;
-W = ...       \\&amp;
-V = ...       \\&amp;
-B = ...       \\&amp;
-N = Liquidity + Debits - Credits       \\&amp;
+<p>Conjecture of <strong>?@eq-moneyquant</strong> and <strong>?@eq-workthermal</strong></p>
+<p>How consistently map economical measures to the quantities of nature to model the economical system?</p>
+<p>Input:</p>
+<p><span id="eq-ecoinput"><span class="math display">\[\begin{split} &amp;
+\text{ Input = Resouces + Labor + Capital = Work = } \Delta Energy
 \end{split} \tag{1}\]</span></span></p>
-<details>
-<summary>
-acronyms
-</summary>
+<p>Output:</p>
+<p><span id="eq-ecooutput"><span class="math display">\[\begin{split} &amp;
+\text{ Output = Gods + Services = Production = } \Delta State
+\end{split} \tag{2}\]</span></span></p>
+<p>Productivity:</p>
+<p><span id="eq-ecooutput"><span class="math display">\[\begin{split} &amp;
+Y = \frac{Output}{Input} = \frac{\Delta State}{Work} = \frac{r_1 - r_0}{r_0}
+\end{split} \tag{3}\]</span></span></p>
 <style>
 td, th {
    border: none!important;
 }
 </style>
 <table class="caption-top table">
-<colgroup>
-<col style="width: 50%">
-<col style="width: 50%">
-</colgroup>
+<thead>
+<tr class="header">
+<th>Economy</th>
+<th></th>
+<th></th>
+<th>Physics</th>
+</tr>
+</thead>
 <tbody>
 <tr class="odd">
-<td><span class="math inline">\(A =\)</span> Assets (Vermögen)</td>
-<td><span class="math inline">\(L =\)</span> Liabilities</td>
+<td>Assets</td>
+<td>Resources</td>
+<td></td>
+<td>Matter</td>
 </tr>
 <tr class="even">
-<td><span class="math inline">\(X =\)</span> Expenses</td>
-<td><span class="math inline">\(S =\)</span> Financial Leverage (Verschuldungsgrad)</td>
+<td>Liabilities</td>
+<td>Capital</td>
+<td></td>
+<td>Space</td>
 </tr>
 <tr class="odd">
-<td><span class="math inline">\(I =\)</span> Income</td>
-<td><span class="math inline">\(E =\)</span> Equity</td>
+<td>Expenses</td>
+<td>Labor</td>
+<td>Work</td>
+<td>Momentum</td>
 </tr>
 <tr class="even">
-<td><span class="math inline">\(Y =\)</span> Yield, Gain, Return, Earning, Profit</td>
-<td><span class="math inline">\(Q =\)</span> Liquidity</td>
-</tr>
-<tr class="odd">
-<td><span class="math inline">\(D =\)</span> Debit</td>
-<td><span class="math inline">\(C =\)</span> Credits</td>
-</tr>
-<tr class="even">
-<td><span class="math inline">\(G =\)</span> G&amp;A General &amp; Administration</td>
-<td><span class="math inline">\(E_T =\)</span> EBIT</td>
-</tr>
-<tr class="odd">
-<td><span class="math inline">\(E_D =\)</span> EBITDA</td>
-<td><span class="math inline">\(U =\)</span> Productitivy</td>
-</tr>
-<tr class="even">
-<td><span class="math inline">\(P =\)</span> Profitability</td>
-<td><span class="math inline">\(R_E =\)</span> ROE</td>
-</tr>
-<tr class="odd">
-<td><span class="math inline">\(R_A =\)</span> ROA</td>
-<td><span class="math inline">\(R_I =\)</span> ROI</td>
-</tr>
-<tr class="even">
-<td><span class="math inline">\(F =\)</span> Cash Flow (CF)</td>
-<td><span class="math inline">\(F_F =\)</span> Free CF</td>
-</tr>
-<tr class="odd">
-<td><span class="math inline">\(W =\)</span> WACC</td>
-<td><span class="math inline">\(V =\)</span> NPV</td>
-</tr>
-<tr class="even">
-<td><span class="math inline">\(B =\)</span> DB Deckungsbeitrag</td>
-<td><span class="math inline">\(N =\)</span> NUV (Nettoumlaufsvermögen)</td>
-</tr>
-<tr class="odd">
-<td>$ =$ …</td>
-<td>$ =$ …</td>
+<td>Income</td>
+<td></td>
+<td>Energy</td>
+<td>Time</td>
 </tr>
 </tbody>
 </table>
-</details>
 
 
 
