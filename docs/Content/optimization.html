@@ -576,7 +576,75 @@ window.Quarto = {
 
 
 
-<p>Optimization dependencies to achieve targets “<span class="math inline">\(z, h\)</span>”:</p>
+Framing contracts and jurisdiction to match <span class="math inline">\(p = Liabilities + Equity\)</span> and <span class="math inline">\(v = economical velocity\)</span> that can be modelled as follows. Typical modelling approaches for fuction <span class="math inline">\(y\)</span> depending of <span class="math inline">\(x\)</span>:
+<style>
+td, th {
+   border: none!important;
+}
+</style>
+<div id="tbl-modeling" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-modeling-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Table&nbsp;1: Modelling Functions
+</figcaption>
+<div aria-describedby="tbl-modeling-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<table class="caption-top table">
+<colgroup>
+<col style="width: 23%">
+<col style="width: 27%">
+<col style="width: 49%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Type</th>
+<th style="text-align: left;">Model</th>
+<th style="text-align: left;">Linearization</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Linear</td>
+<td style="text-align: left;"><span class="math inline">\(y = a + bx\)</span></td>
+<td style="text-align: left;"><span class="math inline">\(y = a + bx\)</span></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Gemetric</td>
+<td style="text-align: left;"><span class="math inline">\(y = a \cdot x^b\)</span></td>
+<td style="text-align: left;"><span class="math inline">\(\log y = \log a + b \cdot (\log x)\)</span></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Exponential deca.</td>
+<td style="text-align: left;"><span class="math inline">\(y = a \cdot b^x\)</span></td>
+<td style="text-align: left;"><span class="math inline">\(\log y = \log a + (\log b) \cdot x\)</span></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Exponential nat.</td>
+<td style="text-align: left;"><span class="math inline">\(y = a \cdot e^{bx}\)</span></td>
+<td style="text-align: left;"><span class="math inline">\(\ln y = \ln a + bx\)</span></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Periodical</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Polynomial</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Taylor</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+</tr>
+</tbody>
+</table>
+</div>
+</figure>
+</div>
+<p><br>
+<br>
+Optimization to achieve target states “<span class="math inline">\(z, h\)</span>”:</p>
 <ol type="1">
 <li><p>Oneness situaiton modelling:</p>
 <p>minimize efforts = <span class="math inline">\(z\)</span> or maximizie return = <span class="math inline">\(z\)</span></p></li>
@@ -586,7 +654,6 @@ window.Quarto = {
 \text{min. constraints:}  \hspace{0.7cm}   \left[ a_{ki} \right] \cdot x \ge b   \\&amp;
 \text{max. constraints:}  \hspace{0.6cm}   \left[ a_{ki} \right] \cdot x \le b   \\&amp;
 \text{condition:}         \hspace{2.3cm}   x \ge 0   \\&amp;
-\text{work:}         \hspace{3.2cm}   F \cdot z = p \cdot \dot z
 \end{split} \tag{1}\]</span></span></p>
 <ol start="2" type="1">
 <li><p>Duality situation modelling:</p>
@@ -596,12 +663,10 @@ window.Quarto = {
 \text{target min.:}         \hspace{1.8cm}      z = c^T \cdot x     \\&amp;
 \text{min. constraints:}    \hspace{0.6cm}      \left[ a_{ki} \right] \cdot x \ge b   \\&amp;
 \text{condition:}           \hspace{2.2cm}      x \ge 0       \\&amp;
-\text{work:}         \hspace{3.2cm}   F \cdot z = p \cdot \dot z        \\&amp;
 \textit{ and}    \\&amp;
 \text{target max.:}         \hspace{1.8cm}      h = b^T \cdot y \\&amp;
 \text{max. constraints:}    \hspace{0.6cm}      \left[ a_{ki} \right]^T \cdot y \le c   \\&amp;
 \text{condition:}           \hspace{2.2cm}      y \ge 0         \\&amp;
-\text{work:}         \hspace{3.2cm}   F \cdot h = p \cdot \dot h
 \end{split} \tag{2}\]</span></span></p>
 <ol start="3" type="1">
 <li>Normalization:</li>
@@ -611,7 +676,6 @@ window.Quarto = {
 \text{min. constraints:}    \hspace{0.7cm}    \left( \left[ a_{ki} \right] - x_{n+k} \right) \cdot x = b   \\&amp;
 \text{max. constraints:}    \hspace{0.6cm}    \left( \left[ a_{ki} \right] + x_{n+k} \right) \cdot x = b   \\&amp;
 \text{condition:}           \hspace{2.3cm}    x \ge 0       \\&amp;
-\text{work:}         \hspace{3.2cm}   F \cdot z = p \cdot \dot z
 \end{split} \tag{3}\]</span></span></p>
 <ol start="4" type="1">
 <li>Solutioan with <a href="https://cbom.atozmath.com/CBOM/Simplex.aspx?q=sm">Simplex algorithm</a></li>
