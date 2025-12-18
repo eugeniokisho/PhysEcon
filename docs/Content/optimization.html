@@ -576,7 +576,7 @@ window.Quarto = {
 
 
 
-<p>Optimization to achieve targets “<span class="math inline">\(z, h\)</span>”:</p>
+<p>Optimization dependencies to achieve targets “<span class="math inline">\(z, h\)</span>”:</p>
 <ol type="1">
 <li><p>Oneness situaiton modelling:</p>
 <p>minimize efforts = <span class="math inline">\(z\)</span> or maximizie return = <span class="math inline">\(z\)</span></p></li>
@@ -608,8 +608,8 @@ window.Quarto = {
 </ol>
 <p><span id="eq-optnorm"><span class="math display">\[\begin{split} &amp;
 \text{target:}              \hspace{3cm}      z = c^T \cdot x \\&amp;
-\text{min. constraints:}    \hspace{0.7cm}    \left[ a_{ki} \right] - x_{n+k} \cdot x = b   \\&amp;
-\text{max. constraints:}    \hspace{0.6cm}    \left[ a_{ki} \right] + x_{n+k} \cdot x = b   \\&amp;
+\text{min. constraints:}    \hspace{0.7cm}    \left( \left[ a_{ki} \right] - x_{n+k} \right) \cdot x = b   \\&amp;
+\text{max. constraints:}    \hspace{0.6cm}    \left( \left[ a_{ki} \right] + x_{n+k} \right) \cdot x = b   \\&amp;
 \text{condition:}           \hspace{2.3cm}    x \ge 0       \\&amp;
 \text{work:}         \hspace{3.2cm}   F \cdot z = p \cdot \dot z
 \end{split} \tag{3}\]</span></span></p>
