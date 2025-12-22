@@ -72,19 +72,6 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
-<style>html{ scroll-behavior: smooth; }</style>
-<script type="application/json" class="js-hypothesis-config">
-{
-  "theme": "classic",
-  "openSidebar": false
-}
-</script>
-<script async="" src="https://hypothes.is/embed.js"></script>
-<script>
-  window.document.addEventListener("DOMContentLoaded", function (_event) {
-    document.body.classList.add('hypothesis-enabled');
-  });
-</script>
 
   <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
   <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
@@ -542,26 +529,6 @@ window.Quarto = {
 </li>
       </ul>
   </li>
-        <li class="sidebar-item sidebar-item-section">
-      <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true">
- <span class="menu-text">Economical Models</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true" aria-label="Toggle section">
-            <i class="bi bi-chevron-right ms-2"></i>
-          </a> 
-      </div>
-      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
-          <li class="sidebar-item">
- <span class="menu-text">section_2a.qmd</span>
-  </li>
-          <li class="sidebar-item">
- <span class="menu-text">section_2b.qmd</span>
-  </li>
-          <li class="sidebar-item">
- <span class="menu-text">section_2c.qmd</span>
-  </li>
-      </ul>
-  </li>
     </ul>
     </div>
 </nav>
@@ -569,7 +536,7 @@ window.Quarto = {
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
         
-    <div class="quarto-alternate-formats"><h2>Other Formats</h2><ul><li><a href="optimization.pdf"><i class="bi bi-file-pdf"></i>PDF</a></li></ul></div><div class="quarto-other-links"><h2>Other Links</h2><ul><li><a href="https://quarto.org/docs/output-formats/html-basics.html"><i class="bi bi-link-45deg"></i>navigate...</a></li></ul></div></div>
+    <div class="quarto-alternate-formats"><h2>Other Formats</h2><ul><li><a href="optimization.pdf"><i class="bi bi-file-pdf"></i>PDF</a></li></ul></div><div class="quarto-other-links"><h2>Other Links</h2><ul><li><a href="https://quarto.org/docs/output-formats/html-basics.html"><i class="bi bi-link-45deg"></i>see also</a></li></ul></div></div>
 <!-- main -->
 <main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block"></header>
 
@@ -651,41 +618,41 @@ Linear optimization to achieve target states “<span class="math inline">\(z, h
 <p>minimize efforts = <span class="math inline">\(z\)</span> or maximizie return = <span class="math inline">\(z\)</span></p></li>
 </ol>
 <p><span id="eq-situationopt"><span class="math display">\[\begin{split} &amp;
-\text{target:}            \hspace{3cm}     z = c^T \cdot x \\&amp;
-\text{min. constraints:}  \hspace{0.7cm}   \left[ a_{ki} \right] \cdot x \ge b   \\&amp;
-\text{max. constraints:}  \hspace{0.6cm}   \left[ a_{ki} \right] \cdot x \le b   \\&amp;
-\text{condition:}         \hspace{2.3cm}   x \ge 0   \\&amp;
+\text{target:}            \hphantom{min.nstraints:}     z = c^T \cdot x \\&amp;
+\text{min. constraints:}  \hphantom{max.}               \left[ a_{ki} \right] \cdot x \ge b   \\&amp;
+\text{max. constraints:}  \hphantom{min.}               \left[ a_{ki} \right] \cdot x \le b   \\&amp;
+\text{condition:}         \hphantom{max.raints:}        x \ge 0   \\&amp;
 \end{split} \tag{1}\]</span></span></p>
 <ol start="2" type="1">
 <li><p>Duality situation modelling:</p>
 <p>minimize efforts = <span class="math inline">\(z\)</span> and maximize return = <span class="math inline">\(h\)</span></p></li>
 </ol>
 <p><span id="eq-situationdual"><span class="math display">\[\begin{split} &amp;
-\text{target min.:}         \hspace{1.8cm}      z = c^T \cdot x     \\&amp;
-\text{min. constraints:}    \hspace{0.6cm}      \left[ a_{ki} \right] \cdot x \ge b   \\&amp;
-\text{condition:}           \hspace{2.2cm}      x \ge 0       \\&amp;
+\text{target min.:}         \hphantom{ andints:}      z = c^T \cdot x     \\&amp;
+\text{min. constraints:}    \hphantom{ and}           \left[ a_{ki} \right] \cdot x \ge b   \\&amp;
+\text{condition:}           \hphantom{ andraints:}    x \ge 0       \\&amp;
 \textit{ and}    \\&amp;
-\text{target max.:}         \hspace{1.8cm}      h = b^T \cdot y \\&amp;
-\text{max. constraints:}    \hspace{0.6cm}      \left[ a_{ki} \right]^T \cdot y \le c   \\&amp;
-\text{condition:}           \hspace{2.2cm}      y \ge 0         \\&amp;
+\text{target max.:}         \hphantom{ andints:}      h = b^T \cdot y \\&amp;
+\text{max. constraints:}    \hphantom{ and}           \left[ a_{ki} \right]^T \cdot y \le c   \\&amp;
+\text{condition:}           \hphantom{ andraints:}    y \ge 0         \\&amp;
 \end{split} \tag{2}\]</span></span></p>
 <ol start="3" type="1">
 <li>Normalization:</li>
 </ol>
 <p><span id="eq-optnorm"><span class="math display">\[\begin{split} &amp;
-\text{target:}              \hspace{3cm}      z = c^T \cdot x \\&amp;
-\text{min. constraints:}    \hspace{0.7cm}    \left( \left[ a_{ki} \right] - x_{n+k} \right) \cdot x = b   \\&amp;
-\text{max. constraints:}    \hspace{0.6cm}    \left( \left[ a_{ki} \right] + x_{n+k} \right) \cdot x = b   \\&amp;
-\text{condition:}           \hspace{2.3cm}    x \ge 0       \\&amp;
+\text{target:}              \hphantom{min.nstraints:}      z = c^T \cdot x \\&amp;
+\text{min. constraints:}    \hphantom{max.}    \left( \left[ a_{ki} \right] - x_{n+k} \right) \cdot x = b   \\&amp;
+\text{max. constraints:}    \hphantom{min.}    \left( \left[ a_{ki} \right] + x_{n+k} \right) \cdot x = b   \\&amp;
+\text{condition:}           \hphantom{max.raints:}    x \ge 0       \\&amp;
 \end{split} \tag{3}\]</span></span></p>
 <ol start="4" type="1">
-<li>Solutioan with <a href="https://cbom.atozmath.com/CBOM/Simplex.aspx?q=sm">Simplex algorithm</a></li>
+<li>Solution with <a href="https://cbom.atozmath.com/CBOM/Simplex.aspx?q=sm">Simplex algorithm</a></li>
 </ol>
 <p>multilinear and exponential models …</p>
 
 
 
-<p>© Update available at <a href="https://eugenionet.github.io/PhysEcon/">eugenionet.github.io/PhysEcon</a>. <a href="mailto:eugenionetweb@gmail.com?subject=Working%20Paper%20Economy-Physics&amp;body=Body%20text">Contact</a> author to collaborate.</p></main> <!-- /main -->
+</main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
     // Ensure there is a toggle, if there isn't float one in the top right
@@ -1100,9 +1067,21 @@ Linear optimization to achieve target states “<span class="math inline">\(z, h
   });
   </script>
 </div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">
+      &nbsp;
+    </div>   
+    <div class="nav-footer-center">
+<p>© 2026 Eugenio Net. | <a href="https://eugenionet.github.io/physecon/index.pdf">PDF print</a> | Update at <a href="https://eugenionet.github.io/physecon/">eugenionet.github.io/physecon</a> | <a href="mailto:eugenionetweb@gmail.com?subject=Working%20Paper%20Economy-Physics&amp;body=Body%20text">Contact</a> to collaborate</p>
+</div>
+    <div class="nav-footer-right">
+      &nbsp;
+    </div>
+  </div>
+</footer>
 
 
 
 
-<script src="../site_libs/quarto-html/zenscroll-min.js"></script>
 </body></html>
