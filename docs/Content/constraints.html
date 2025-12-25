@@ -388,14 +388,14 @@ window.Quarto = {
     <ul class="list-unstyled mt-1">
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../introduction.qmd" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Introduction</span></a>
+  <a href="../dummy.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Synopsis</span></a>
   </div>
 </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a href="../overview-summary.qmd" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Overview</span></a>
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true">
+ <span class="menu-text">Projects</span></a>
           <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
@@ -405,6 +405,53 @@ window.Quarto = {
   <div class="sidebar-item-container"> 
   <a href="../index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">PhysEcon</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../dummy.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">PhysFina</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true">
+ <span class="menu-text">Topics</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../Content/2pi.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Periodicity</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../Content/lightspeed.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Velocity - Movement of Matter in Space and Time</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../Content/refraction.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Matter and Refraction</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../Content/metric.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Metric</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../Content/finestructure.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Finestructure</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -529,6 +576,23 @@ window.Quarto = {
 </li>
       </ul>
   </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../dummy.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Resources</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../dummy.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Sources</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
     </ul>
     </div>
 </nav>
@@ -544,23 +608,31 @@ window.Quarto = {
 
 
 
-<p>Constraints given by:</p>
+<p>Constraints:</p>
 <ul>
-<li>initial state</li>
-<li>boundry conditions</li>
-<li>access to limited resources</li>
-<li>contractual covenants</li>
-<li>juristic law</li>
+<li>initial state, starting conditions</li>
+<li>acting boundary conditions (to move within): e.g.&nbsp;demography, economical and political stability, labor force, education and know-how, health and technological level</li>
+<li>access to limited resources: e.g.&nbsp;chemical elements, minerals, fuels, commodities, trade and transportations, etc.</li>
+<li>contractual agreements and covenants, legal assurance</li>
+<li>juristic law framework</li>
 </ul>
 <p>Modelling movement (change of state) under constraints:</p>
 <ol type="1">
 <li><p>Movement ist charecterized by change of energy, Lagrangian <span class="math inline">\(\mathcal{L} \neq 0\)</span>: <span id="eq-lagrangian"><span class="math display">\[\begin{split} &amp;
-\mathcal{L} = E_{kin} - E_{pot} \\&amp;
+\mathcal{L} = \mathcal{K} - \mathcal{U}
+\qquad
+\frac{\partial \mathcal{L}}{\partial r} = F
+\qquad
+\frac{\partial \mathcal{L}}{\partial v} = p
 \end{split} \tag{1}\]</span></span></p></li>
-<li><p>Movement happens within constraints of forces: <span id="eq-constrainforce"><span class="math display">\[\begin{split} &amp;
-\hat{F_i} + \tilde{F_i} = \hat{F_i} + \sum_{k=1}^{s_d} \lambda_k a_{ki} = \frac{d}{dt} \left( \frac{\partial \mathcal{L}}{\partial v_i} \right) - \frac{\partial \mathcal{L}}{\partial r_i}  
+<li><p>Movement happens within constraints of forces. Constrains are observable, whereas forces might be unknown. Therefore, <span class="math inline">\(r\)</span> can be determined from <span class="math inline">\(\mathcal{L}\)</span> (Energy and Work) of the <strong>system at rest <span class="math inline">\(F=0\)</span></strong>, instead than from “searching” all acting forces <span class="math inline">\(F_i\)</span>. Thus, we solve for <strong><span class="math inline">\(\mathcal{L}\)</span></strong> at equilibirium: <span id="eq-constrainforce"><span class="math display">\[\begin{split} &amp;
+F_{total} = \hat{F_i} + \tilde{F_i} = \hat{F_i} + \sum_{k=1}^{s_d} \lambda_k a_{ki} = \frac{d}{dt} \left( \frac{\partial \mathcal{L}}{\partial v_i} \right) - \frac{\partial \mathcal{L}}{\partial r_i}
+= \begin{cases}
+= 0    : \text{ Equilibrium} \\
+\neq 0 : \text{ Movement}
+  \end{cases}
 \end{split} \tag{2}\]</span></span></p>
-<p>and at same time, constraining conditions delimitate movement: <span id="eq-constraincondition"><span class="math display">\[\begin{split} &amp;
+<p>and at same time solving for constraining conditions that hold the system at rest (equilibrium): <span id="eq-constraincondition"><span class="math display">\[\begin{split} &amp;
 \sum_{l=1}^f a_{kl} v_l + b_k = 0
 \end{split} \tag{3}\]</span></span></p></li>
 <li><p>Rest is characterized by unchanged energy, Hamiltonian <span class="math inline">\(\mathcal{H} = E_{kin} + E_{pot} = const.\)</span>. There is movement from state of rest if <span class="math inline">\(\mathcal{H} \neq 0\)</span>: <span id="eq-hamiltonian"><span class="math display">\[\begin{split} &amp;
@@ -1002,7 +1074,7 @@ window.Quarto = {
       &nbsp;
     </div>   
     <div class="nav-footer-center">
-<p>© 2026 Eugenio Net. | <a href="https://eugenionet.github.io/physecon/index.pdf">PDF print</a> | Update at <a href="https://eugenionet.github.io/physecon/">eugenionet.github.io/physecon</a> | <a href="mailto:eugenionetweb@gmail.com?subject=Working%20Paper%20Economy-Physics&amp;body=Body%20text">Contact</a> to collaborate</p>
+<p>© 2026 Eugenio Net. | <a href="https://eugenionet.github.io/physecon/index.pdf">PDF script</a> | Update at <a href="https://eugenionet.github.io/physecon/">eugenionet.github.io/physecon</a> | <a href="mailto:eugenionetweb@gmail.com?subject=Working%20Paper%20Economy-Physics&amp;body=Body%20text">Contact</a> to collaborate</p>
 </div>
     <div class="nav-footer-right">
       &nbsp;

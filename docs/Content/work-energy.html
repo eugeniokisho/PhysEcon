@@ -388,14 +388,14 @@ window.Quarto = {
     <ul class="list-unstyled mt-1">
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../introduction.qmd" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Introduction</span></a>
+  <a href="../dummy.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Synopsis</span></a>
   </div>
 </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a href="../overview-summary.qmd" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Overview</span></a>
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true">
+ <span class="menu-text">Projects</span></a>
           <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
@@ -405,6 +405,53 @@ window.Quarto = {
   <div class="sidebar-item-container"> 
   <a href="../index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">PhysEcon</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../dummy.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">PhysFina</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true">
+ <span class="menu-text">Topics</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../Content/2pi.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Periodicity</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../Content/lightspeed.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Velocity - Movement of Matter in Space and Time</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../Content/refraction.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Matter and Refraction</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../Content/metric.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Metric</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../Content/finestructure.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Finestructure</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -529,6 +576,23 @@ window.Quarto = {
 </li>
       </ul>
   </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../dummy.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Resources</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../dummy.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Sources</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
     </ul>
     </div>
 </nav>
@@ -545,37 +609,79 @@ window.Quarto = {
 
 
 <p><span class="math inline">\(\exists\)</span> Work done or received <span class="math inline">\(W \neq 0 \Rrightarrow \exists\)</span> Change of State (“Displacement”, “Deformation”) <span class="math inline">\(r \neq 0\)</span>:</p>
-<p><span id="eq-workaction"><span class="math display">\[\begin{split} &amp;
-W = \partial A = \partial(E \cdot t) = \partial(p ⋅ r) = F_1 \cdot r_1 + p_2 \cdot v_2 =
+<p><span id="eq-energy"><span class="math display">\[\begin{split} &amp;
+E = \mathcal{K} + \mathcal{U}  \qquad  E_{kin} \coloneqq \mathcal{K} = \frac{1}{2}pv   \qquad   E_{pot} \coloneqq \mathcal{U} = \mathcal{V} + \mathcal{Z}
+\end{split} \tag{1}\]</span></span></p>
+<p>Energy is conserved in konservative systems; There is no work in closed path between two points (loop) of any shape under path variation, hence the “Principle of Action” applies (extremities of bumps and saddles exist): <span class="math inline">\(\delta A = 0\)</span></p>
+<p>Potentials: <span id="eq-potential"><span class="math display">\[\begin{split} &amp;
+\mathcal{U} = \mathcal{V} + \mathcal{Z}
+\\&amp;
+\mathcal{V}
+    \begin{cases}
+      = \frac{1}{2} kr^2 : \text{isotrop harmonical oscilator central field Potential, } \\
+        \qquad \text{closed bounded path, } \text{"spring constant" } k = m\omega^2 = 2\pi \cdot \nu  \\
+      = -\frac{1}{r}\alpha: \text{gravitational central field Potential, } \\
+        \qquad \text{closed bounded path, } \alpha = \left( \frac{2\pi}{\Delta \varphi} \right)^2 = const. \\
+      \sim \frac{1}{r}e^{\mu r} : \text{Yukawa Potential}, \text{"Photon mass" } m_{\gamma} = \mu \frac{\hbar}{c} \\
+      ...
+    \end{cases}
+\end{split} \tag{2}\]</span></span></p>
+<p>Centrifugal Potential: <span id="eq-centrifugalpot"><span class="math display">\[\begin{split} &amp;
+\mathcal{Z} = \frac{1}{2} \frac{1}{m} \left( \frac{L_0}{r} \right)^2 \text{, angular momentum}=L_0
+\end{split} \tag{3}\]</span></span></p>
+<p>Work: <span id="eq-workaction"><span class="math display">\[\begin{split} &amp;
+W = \partial_t A = \partial_t (E \cdot t) = \partial_t (p ⋅ r) = F_1 \cdot r_1 + p_2 \cdot v_2 =
     \begin{cases}
       F \cdot r \\
       p \cdot v
     \end{cases}
-\end{split} \tag{1}\]</span></span></p>
-<p>Geometrical: <span id="eq-workgeom"><span class="math display">\[\begin{split} &amp;
+\end{split} \tag{4}\]</span></span></p>
+<p><em>Geometrical</em>:</p>
+<p><span id="eq-workgeom"><span class="math display">\[\begin{split} &amp;
 W = F \cdot r = mr \cdot a = I ⋅ \frac{v}{t} =  \frac{p}{t} ⋅ tv = Ft \cdot v =  pv = mv^2
-\end{split} \tag{2}\]</span></span></p>
-<p>Analytical: <span id="eq-workanal"><span class="math display">\[\begin{split} &amp;
-W = p \cdot v = \mathcal{L} + \mathcal{H} = (\mathcal{K} - \mathcal{U}) + (\mathcal{K} + \mathcal{U}) = (\mathcal{K} - (\mathcal{V} + \mathcal{Z})) + (\mathcal{K} + \mathcal{U}) = (\mathcal{K} - \mathcal{U}) + E
-\end{split} \tag{3}\]</span></span></p>
-<p>Electro Magnetic: <span id="eq-workelmag"><span class="math display">\[\begin{split} &amp;
-W = \mathcal{L} + \mathcal{H} = \left( \frac{1}{2}mv^2 - q(\Phi - \vec{\mathcal{A}} \cdot \vec{v}) \right) + \left( \frac{1}{2} \frac{1}{m} (\vec{p} - q\vec{\mathcal{A}})^2 + q\Phi \right)\end{split} \tag{4}\]</span></span></p>
-<p>Relativistic: <span id="eq-workrel"><span class="math display">\[\begin{split} &amp;
-W = p \cdot v = \frac{v}{c} \sqrt{E^2 - (mc^2)^2}
 \end{split} \tag{5}\]</span></span></p>
-<p>Thermal: <span id="eq-workthermal"><span class="math display">\[\begin{split} &amp;
-W = F \cdot r = PV^{\iota} = T \cdot V^{\frac{f+2}{f}} = T \cdot V^{(\frac{c_P}{c_V}-1)} = T \cdot V^{\kappa-1} = T \cdot l \cdot g_0 = T \cdot n \cdot b_0 = T \cdot m \cdot c_0
+<p><em>Analytical</em>:</p>
+<p><span id="eq-lagrange"><span class="math display">\[\begin{split} &amp;
+\mathcal{L} = \mathcal{L}(r,\dot r,t) = E_{kin} - E_{pot}
 \end{split} \tag{6}\]</span></span></p>
-<p>Thermo Statistical: <span id="eq-workthemostat"><span class="math display">\[\begin{split} &amp;
-W = \mathcal{L} + \mathcal{H} = ΔU - ΔH = \Delta(T \cdot \Delta S - P \cdot \Delta V) - \Delta(T\cdot S)
+<p><span id="eq-hamilton"><span class="math display">\[\begin{split} &amp;
+\mathcal{H} = \mathcal{H}(r,p,t) = \sum_i^f \dot r_i p_i - \mathcal{L}
+\stackrel{konserv.}{=}
+E_{kin} + E_{pot} = const.
 \end{split} \tag{7}\]</span></span></p>
-<p>Quantistic:</p>
+<p><span id="eq-action"><span class="math display">\[\begin{split} &amp;
+A = E \cdot t = p \cdot r
+\stackrel{\mathcal{H}=0}{=}
+\int_{t_0}^{t_x} \mathcal{L} dt
+\end{split} \tag{8}\]</span></span></p>
+<p><span id="eq-workanal"><span class="math display">\[\begin{split} &amp;
+W = p \cdot v = \mathcal{L} + \mathcal{H} = (\mathcal{K} - \mathcal{U}) + \mathcal{H}
+\\&amp; \stackrel{konserv.}{=}
+(\mathcal{K} - \mathcal{U}) + (\mathcal{K} + \mathcal{U}) = (\mathcal{K} - \mathcal{U}) + E
+\end{split} \tag{9}\]</span></span></p>
+<p><em>Electro Magnetic</em>:</p>
+<p><span id="eq-workelmag"><span class="math display">\[\begin{split} &amp;
+W = \mathcal{L} + \mathcal{H} = \left( \frac{1}{2}mv^2 - q(\Phi - \vec{\mathcal{A}} \cdot \vec{v}) \right) + \left( \frac{1}{2} \frac{1}{m} (\vec{p} - q\vec{\mathcal{A}})^2 + q\Phi \right)\end{split} \tag{10}\]</span></span></p>
+<p><em>Relativistic</em>:</p>
+<p><span id="eq-workrel"><span class="math display">\[\begin{split} &amp;
+W = p \cdot v = \frac{v}{c} \sqrt{E^2 - (mc^2)^2}
+\end{split} \tag{11}\]</span></span></p>
+<p><em>Thermal</em>:</p>
+<p><span id="eq-workthermal"><span class="math display">\[\begin{split} &amp;
+W = Fr = PV^{\iota} = T \cdot V^{\frac{f+2}{f}} = T \cdot V^{(\frac{c_P}{c_V}-1)} = TV^{\kappa-1}  \\&amp;
+= T \cdot l \cdot g_0 = T \cdot n \cdot b_0 = T \cdot m \cdot c_0
+\end{split} \tag{12}\]</span></span></p>
+<p><em>Thermo Statistical</em>:</p>
+<p><span id="eq-workthemostat"><span class="math display">\[\begin{split} &amp;
+W = \mathcal{L} + \mathcal{H} = ΔU - ΔH = \Delta(T \cdot \Delta S - P \cdot \Delta V) - \Delta(T\cdot S)
+\end{split} \tag{13}\]</span></span></p>
+<p><em>Quantistic</em>:</p>
 <p><span id="eq-workquant"><span class="math display">\[\begin{split} &amp;
 W = p \cdot v = ħ\mathcal{k} \cdot ω = ℎν\mathcal{k} = E\mathcal{k}
-\end{split} \tag{8}\]</span></span></p>
+\end{split} \tag{14}\]</span></span></p>
 <p><span id="eq-uncertainity"><span class="math display">\[\begin{split} &amp;
 \Delta A = \Delta p  \cdot \Delta r = \Delta E \cdot \Delta t \ge \frac{1}{2} \hbar
-\end{split} \tag{9}\]</span></span></p>
+\end{split} \tag{15}\]</span></span></p>
 <p><br>
 <br>
 </p>
@@ -1005,7 +1111,7 @@ W = p \cdot v = ħ\mathcal{k} \cdot ω = ℎν\mathcal{k} = E\mathcal{k}
       &nbsp;
     </div>   
     <div class="nav-footer-center">
-<p>© 2026 Eugenio Net. | <a href="https://eugenionet.github.io/physecon/index.pdf">PDF print</a> | Update at <a href="https://eugenionet.github.io/physecon/">eugenionet.github.io/physecon</a> | <a href="mailto:eugenionetweb@gmail.com?subject=Working%20Paper%20Economy-Physics&amp;body=Body%20text">Contact</a> to collaborate</p>
+<p>© 2026 Eugenio Net. | <a href="https://eugenionet.github.io/physecon/index.pdf">PDF script</a> | Update at <a href="https://eugenionet.github.io/physecon/">eugenionet.github.io/physecon</a> | <a href="mailto:eugenionetweb@gmail.com?subject=Working%20Paper%20Economy-Physics&amp;body=Body%20text">Contact</a> to collaborate</p>
 </div>
     <div class="nav-footer-right">
       &nbsp;
