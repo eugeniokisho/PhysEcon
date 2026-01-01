@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>optimization – PHYSECON</title>
+<title>quant_h – PHYSECON</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -810,7 +810,7 @@ window.Quarto = {
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
         
-    <div class="quarto-alternate-formats"><h2>Other Formats</h2><ul><li><a href="optimization.pdf"><i class="bi bi-file-pdf"></i>PDF</a></li></ul></div><div class="quarto-other-links"><h2>Other Links</h2><ul><li><a href="https://quarto.org/docs/output-formats/html-basics.html"><i class="bi bi-link-45deg"></i>see also</a></li></ul></div></div>
+    <div class="quarto-alternate-formats"><h2>Other Formats</h2><ul><li><a href="Quant_h.pdf"><i class="bi bi-file-pdf"></i>PDF</a></li></ul></div><div class="quarto-other-links"><h2>Other Links</h2><ul><li><a href="https://quarto.org/docs/output-formats/html-basics.html"><i class="bi bi-link-45deg"></i>see also</a></li></ul></div></div>
 <!-- main -->
 <main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block"></header>
 
@@ -818,111 +818,28 @@ window.Quarto = {
 
 
 
-Framing contracts and jurisdiction ahead to match <span class="math inline">\(p = \text{"Economy Funds"}\)</span> and <span class="math inline">\(v = \text{"Economy Velocity"}\)</span> that can be modelled with typical approaches for fuction <span class="math inline">\(z = \text{"arrival state"}\)</span> depending on <span class="math inline">\(x = \text{"starting state"}\)</span>, so that “work” <span class="math inline">\(W = F \cdot r =  F \cdot (z - x)\)</span>:
-<style>
-td, th {
-   border: none!important;
-}
-</style>
-<div id="tbl-modeling" class="quarto-float quarto-figure quarto-figure-center anchored">
-<figure class="quarto-float quarto-float-tbl figure">
-<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-modeling-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Table&nbsp;1: Modelling Functions
-</figcaption>
-<div aria-describedby="tbl-modeling-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<table class="caption-top table">
-<colgroup>
-<col style="width: 23%">
-<col style="width: 27%">
-<col style="width: 49%">
-</colgroup>
-<thead>
-<tr class="header">
-<th style="text-align: left;">Type</th>
-<th style="text-align: left;">Model</th>
-<th style="text-align: left;">Linearisation</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td style="text-align: left;">Linear</td>
-<td style="text-align: left;"><span class="math inline">\(z = a + bx\)</span></td>
-<td style="text-align: left;"><span class="math inline">\(z = a + bx\)</span></td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">Gemetric</td>
-<td style="text-align: left;"><span class="math inline">\(z = a \cdot x^b\)</span></td>
-<td style="text-align: left;"><span class="math inline">\(\log z = \log a + b \cdot (\log x)\)</span></td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">Exponential deca.</td>
-<td style="text-align: left;"><span class="math inline">\(z = a \cdot b^x\)</span></td>
-<td style="text-align: left;"><span class="math inline">\(\log z = \log a + (\log b) \cdot x\)</span></td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">Exponential nat.</td>
-<td style="text-align: left;"><span class="math inline">\(z = a \cdot e^{bx}\)</span></td>
-<td style="text-align: left;"><span class="math inline">\(\ln z = \ln a + bx\)</span></td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">Periodical</td>
-<td style="text-align: left;"></td>
-<td style="text-align: left;"></td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">Polynomial</td>
-<td style="text-align: left;"></td>
-<td style="text-align: left;"></td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">Taylor</td>
-<td style="text-align: left;"></td>
-<td style="text-align: left;"></td>
-</tr>
-</tbody>
-</table>
-</div>
-</figure>
-</div>
-<p><br>
-<br>
-Linear optimization to achieve target states “<span class="math inline">\(z, h\)</span>”:</p>
-<ol type="1">
-<li><p>Oneness situaiton modelling:</p>
-<p>minimize efforts = <span class="math inline">\(z\)</span> or maximizie return = <span class="math inline">\(z\)</span></p></li>
-</ol>
-<p><span id="eq-situationopt"><span class="math display">\[\begin{split} &amp;
-\text{target:}            \hphantom{min.nstraints:}     z = c^T \cdot x \\&amp;
-\text{min. constraints:}  \hphantom{max.}               \left[ a_{ki} \right] \cdot x \ge b   \\&amp;
-\text{max. constraints:}  \hphantom{min.}               \left[ a_{ki} \right] \cdot x \le b   \\&amp;
-\text{condition:}         \hphantom{max.raints:}        x \ge 0   \\&amp;
+<p>Action Quantum, Planck Constant (Energy-Frequency-Slope): <!-- \index{Plank Constant} \index{Action Quantum} --></p>
+<p><span id="eq-quant_h-1"><span class="math display">\[\begin{split} &amp;
+h =
+\tan(\alpha) =
+\frac{E_{kin}}{\nu_i - \nu_0} =
+\frac{eV_{0i}}{\nu_i - \nu_0}
+\equiv \\&amp;
+\frac{\Delta E}{\nu_0} =
+\frac{W}{\nu_0} =
+\frac{F_{EM} \cdot x}{\nu_0} =
+\hbar k \lambda
 \end{split} \tag{1}\]</span></span></p>
-<ol start="2" type="1">
-<li><p>Duality situation modelling:</p>
-<p>minimize efforts = <span class="math inline">\(z\)</span> and maximize return = <span class="math inline">\(h\)</span></p></li>
-</ol>
-<p><span id="eq-situationdual"><span class="math display">\[\begin{split} &amp;
-\text{target min.:}         \hphantom{ andints:}      z = c^T \cdot x     \\&amp;
-\text{min. constraints:}    \hphantom{ and}           \left[ a_{ki} \right] \cdot x \ge b   \\&amp;
-\text{condition:}           \hphantom{ andraints:}    x \ge 0       \\&amp;
-\textit{ and}    \\&amp;
-\text{target max.:}         \hphantom{ andints:}      h = b^T \cdot y \\&amp;
-\text{max. constraints:}    \hphantom{ and}           \left[ a_{ki} \right]^T \cdot y \le c   \\&amp;
-\text{condition:}           \hphantom{ andraints:}    y \ge 0         \\&amp;
+<p><span id="eq-quant_h-2"><span class="math display">\[\begin{split} &amp;
+\hbar =
+\frac{\Delta E}{\omega} =
 \end{split} \tag{2}\]</span></span></p>
-<ol start="3" type="1">
-<li>Normalization:</li>
-</ol>
-<p><span id="eq-optnorm"><span class="math display">\[\begin{split} &amp;
-\text{target:}              \hphantom{min.nstraints:}      z = c^T \cdot x \\&amp;
-\text{min. constraints:}    \hphantom{max.}    \left( \left[ a_{ki} \right] - x_{n+k} \right) \cdot x = b   \\&amp;
-\text{max. constraints:}    \hphantom{min.}    \left( \left[ a_{ki} \right] + x_{n+k} \right) \cdot x = b   \\&amp;
-\text{condition:}           \hphantom{max.raints:}    x \ge 0       \\&amp;
+<p><span id="eq-quant_h-3"><span class="math display">\[\begin{split} &amp;
+\alpha = \angle( E_{kin}, \nu ) \qquad
+e = \textnormal{electron charge} \qquad \\&amp;
+V_0 = \textnormal{Opposing Potential ($I=0$)} \qquad
+E_{kin}^{max} = eV_0    \qquad
 \end{split} \tag{3}\]</span></span></p>
-<ol start="4" type="1">
-<li>Solution with <a href="https://cbom.atozmath.com/CBOM/Simplex.aspx?q=sm">Simplex algorithm</a></li>
-</ol>
-<p>multilinear and exponential models …</p>
 
 
 

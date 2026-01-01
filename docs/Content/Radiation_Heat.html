@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>optimization – PHYSECON</title>
+<title>radiation_heat – PHYSECON</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -810,7 +810,7 @@ window.Quarto = {
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
         
-    <div class="quarto-alternate-formats"><h2>Other Formats</h2><ul><li><a href="optimization.pdf"><i class="bi bi-file-pdf"></i>PDF</a></li></ul></div><div class="quarto-other-links"><h2>Other Links</h2><ul><li><a href="https://quarto.org/docs/output-formats/html-basics.html"><i class="bi bi-link-45deg"></i>see also</a></li></ul></div></div>
+    <div class="quarto-alternate-formats"><h2>Other Formats</h2><ul><li><a href="Radiation_Heat.pdf"><i class="bi bi-file-pdf"></i>PDF</a></li></ul></div><div class="quarto-other-links"><h2>Other Links</h2><ul><li><a href="https://quarto.org/docs/output-formats/html-basics.html"><i class="bi bi-link-45deg"></i>see also</a></li></ul></div></div>
 <!-- main -->
 <main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block"></header>
 
@@ -818,111 +818,130 @@ window.Quarto = {
 
 
 
-Framing contracts and jurisdiction ahead to match <span class="math inline">\(p = \text{"Economy Funds"}\)</span> and <span class="math inline">\(v = \text{"Economy Velocity"}\)</span> that can be modelled with typical approaches for fuction <span class="math inline">\(z = \text{"arrival state"}\)</span> depending on <span class="math inline">\(x = \text{"starting state"}\)</span>, so that “work” <span class="math inline">\(W = F \cdot r =  F \cdot (z - x)\)</span>:
-<style>
-td, th {
-   border: none!important;
-}
-</style>
-<div id="tbl-modeling" class="quarto-float quarto-figure quarto-figure-center anchored">
-<figure class="quarto-float quarto-float-tbl figure">
-<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-modeling-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Table&nbsp;1: Modelling Functions
-</figcaption>
-<div aria-describedby="tbl-modeling-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<table class="caption-top table">
-<colgroup>
-<col style="width: 23%">
-<col style="width: 27%">
-<col style="width: 49%">
-</colgroup>
-<thead>
-<tr class="header">
-<th style="text-align: left;">Type</th>
-<th style="text-align: left;">Model</th>
-<th style="text-align: left;">Linearisation</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td style="text-align: left;">Linear</td>
-<td style="text-align: left;"><span class="math inline">\(z = a + bx\)</span></td>
-<td style="text-align: left;"><span class="math inline">\(z = a + bx\)</span></td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">Gemetric</td>
-<td style="text-align: left;"><span class="math inline">\(z = a \cdot x^b\)</span></td>
-<td style="text-align: left;"><span class="math inline">\(\log z = \log a + b \cdot (\log x)\)</span></td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">Exponential deca.</td>
-<td style="text-align: left;"><span class="math inline">\(z = a \cdot b^x\)</span></td>
-<td style="text-align: left;"><span class="math inline">\(\log z = \log a + (\log b) \cdot x\)</span></td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">Exponential nat.</td>
-<td style="text-align: left;"><span class="math inline">\(z = a \cdot e^{bx}\)</span></td>
-<td style="text-align: left;"><span class="math inline">\(\ln z = \ln a + bx\)</span></td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">Periodical</td>
-<td style="text-align: left;"></td>
-<td style="text-align: left;"></td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">Polynomial</td>
-<td style="text-align: left;"></td>
-<td style="text-align: left;"></td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">Taylor</td>
-<td style="text-align: left;"></td>
-<td style="text-align: left;"></td>
-</tr>
-</tbody>
-</table>
-</div>
-</figure>
-</div>
-<p><br>
-<br>
-Linear optimization to achieve target states “<span class="math inline">\(z, h\)</span>”:</p>
-<ol type="1">
-<li><p>Oneness situaiton modelling:</p>
-<p>minimize efforts = <span class="math inline">\(z\)</span> or maximizie return = <span class="math inline">\(z\)</span></p></li>
-</ol>
-<p><span id="eq-situationopt"><span class="math display">\[\begin{split} &amp;
-\text{target:}            \hphantom{min.nstraints:}     z = c^T \cdot x \\&amp;
-\text{min. constraints:}  \hphantom{max.}               \left[ a_{ki} \right] \cdot x \ge b   \\&amp;
-\text{max. constraints:}  \hphantom{min.}               \left[ a_{ki} \right] \cdot x \le b   \\&amp;
-\text{condition:}         \hphantom{max.raints:}        x \ge 0   \\&amp;
+<p>Thermal Radiation:</p>
+<p>Spectral Reflection: <span id="eq-spectrrefl"><span class="math display">\[\begin{split} &amp;
+\mathscr{R}(\lambda) =
+\frac{d^3\Phi_{\lambda,r}}{d^3\Phi_{\lambda,e}}
 \end{split} \tag{1}\]</span></span></p>
-<ol start="2" type="1">
-<li><p>Duality situation modelling:</p>
-<p>minimize efforts = <span class="math inline">\(z\)</span> and maximize return = <span class="math inline">\(h\)</span></p></li>
-</ol>
-<p><span id="eq-situationdual"><span class="math display">\[\begin{split} &amp;
-\text{target min.:}         \hphantom{ andints:}      z = c^T \cdot x     \\&amp;
-\text{min. constraints:}    \hphantom{ and}           \left[ a_{ki} \right] \cdot x \ge b   \\&amp;
-\text{condition:}           \hphantom{ andraints:}    x \ge 0       \\&amp;
-\textit{ and}    \\&amp;
-\text{target max.:}         \hphantom{ andints:}      h = b^T \cdot y \\&amp;
-\text{max. constraints:}    \hphantom{ and}           \left[ a_{ki} \right]^T \cdot y \le c   \\&amp;
-\text{condition:}           \hphantom{ andraints:}    y \ge 0         \\&amp;
+<p>Spectral Transmission: <span id="eq-spectrtrans"><span class="math display">\[\begin{split} &amp;
+\mathscr{T}(\lambda) =
+\frac{d^3\Phi_{\lambda,t}}{d^3\Phi_{\lambda,e}}
 \end{split} \tag{2}\]</span></span></p>
-<ol start="3" type="1">
-<li>Normalization:</li>
-</ol>
-<p><span id="eq-optnorm"><span class="math display">\[\begin{split} &amp;
-\text{target:}              \hphantom{min.nstraints:}      z = c^T \cdot x \\&amp;
-\text{min. constraints:}    \hphantom{max.}    \left( \left[ a_{ki} \right] - x_{n+k} \right) \cdot x = b   \\&amp;
-\text{max. constraints:}    \hphantom{min.}    \left( \left[ a_{ki} \right] + x_{n+k} \right) \cdot x = b   \\&amp;
-\text{condition:}           \hphantom{max.raints:}    x \ge 0       \\&amp;
+<p>Spectral Absorbtion: <span id="eq-spectrabs"><span class="math display">\[\begin{split} &amp;
+\mathscr{A}(\lambda) =
+\frac{d^3\Phi_{\lambda,a}}{d^3\Phi_{\lambda,e}}
 \end{split} \tag{3}\]</span></span></p>
-<ol start="4" type="1">
-<li>Solution with <a href="https://cbom.atozmath.com/CBOM/Simplex.aspx?q=sm">Simplex algorithm</a></li>
-</ol>
-<p>multilinear and exponential models …</p>
+<p>Spectral Emission: <span id="eq-spectremi"><span class="math display">\[\begin{split} &amp;
+\mathscr{E}(\lambda) =
+\frac{\mathscr{L}(\lambda)}{\mathscr{L}(\lambda,B)}
+\end{split} \tag{4}\]</span></span></p>
+<p><span class="math inline">\(\mathscr{R}(\lambda) + \mathscr{T}(\lambda) + \mathscr{A}(\lambda) = 1\)</span></p>
+<p>Black Body “B”: <span id="eq-blackbody-1"><span class="math display">\[\begin{split} &amp;
+\mathscr{A}(\lambda,T) = \mathscr{E}(\lambda,T) = 1,\
+\mathscr{R}(\lambda,T) = 0,\
+\mathscr{T}(\lambda,T) = 0
+\end{split} \tag{5}\]</span></span></p>
+<p><span class="math inline">\(\Rightarrow\)</span> Heat Radiation (Black Body): <!-- \index{Radiance} --></p>
+<p><span id="eq-blackbody_headrad-1"><span class="math display">\[\begin{split} &amp;
+\mathscr{L}_{B} =
+\frac{c}{4\pi} \langle w_{EM} \rangle =
+\frac{c}{4\pi} w_B
+\end{split} \tag{6}\]</span></span></p>
+<p><span id="eq-blackbody_headrad-2"><span class="math display">\[\begin{split} &amp;
+\mathscr{L}_{\lambda,B}(\lambda,T) =
+\frac{\mathscr{L}_{\lambda}(\lambda,T)}{\mathscr{A}_{\lambda}(\lambda,T)}
+\stackrel{continuum}{=}
+\frac{2c}{\lambda^4}kT
+\stackrel{quantum}{=}
+\frac{2hc^2}{\lambda^5}  \frac{1}{e^{\frac{hc}{\lambda kT}}-1} =
+const.
+\end{split} \tag{7}\]</span></span></p>
+<p><span id="eq-blackbody_headrad-3"><span class="math display">\[\begin{split} &amp;
+\mathscr{L}_{\nu,B}(\nu,T)
+\stackrel{quantum}{=}
+\frac{2h\nu^3}{c^2}  \frac{1}{e^{\frac{hc}{kT}}-1}
+\end{split} \tag{8}\]</span></span></p>
+<p><span id="eq-blackbody_headrad-4"><span class="math display">\[\begin{split} &amp;
+\mathscr{L}_{\lambda,B}(\lambda_x,T_x) =
+\left( \frac{T_x}{T} \right)^5 \cdot \mathscr{L}_{\lambda,B}(\lambda,T)
+\end{split} \tag{9}\]</span></span></p>
+<p><span class="math inline">\(T_x &gt; T \Rightarrow \lambda_x &lt; \lambda\)</span></p>
+<p><span id="eq-blackbody_headrad-5"><span class="math display">\[\begin{split} &amp;
+\lambda_{max} \cdot T =
+\frac{h \cdot c}{5k} \frac{1}{1 - e^{-\lambda_{max} \cdot T}} =
+b = 2.897773 \cdot 10^{-3} m \cdot K
+\end{split} \tag{10}\]</span></span></p>
+<p>Heat Radiation Transfer (sent from source <span class="math inline">\(g\)</span> to receiver <span class="math inline">\(b\)</span> with areas <span class="math inline">\(\mathscr{A}\)</span>):<br>
+<!-- \index{heat radiation transfer} --></p>
+<p><span id="eq-heat_radiation_transfer"><span class="math display">\[\begin{split} &amp;
+d^2\Phi
+\stackrel{vacuum}{=}
+\mathscr{L} \frac{dA_g \cos(\varepsilon_g)}{R} \frac{dA_b \cos(\varepsilon_b)}{R} =
+\frac{\mathscr{L}}{R^2} \cdot dA_g \cos(\varepsilon_g) \cdot dA_b \cos(\varepsilon_b) =
+\mathscr{L} \cos(\varepsilon_b) dA_b d\Omega_b
+\end{split} \tag{11}\]</span></span></p>
+<p>Heat Radiation Return, Reflection Absorbtion (Feedback absorbed “<span class="math inline">\(a\)</span>” at sender <span class="math inline">\(g\)</span> received “<span class="math inline">\(e\)</span>” at receiver <span class="math inline">\(b\)</span>, with areas <span class="math inline">\(\mathscr{A}\)</span> at wavelength <span class="math inline">\(\lambda\)</span> ): <!-- \footnote{condition in vacuum: no scattering and no luminescence, only heat} --> <!-- \index{heat radiation return} \index{reflection absorbtion} --></p>
+<p><span id="eq-heat_radiation_return"><span class="math display">\[\begin{split} &amp;
+d^3\Phi_{\lambda,a,b}
+\stackrel{vacuum}{=}
+\mathscr{A}_b \cdot d^3\Phi_{\lambda,e,b} =
+\mathscr{A}_b \cdot \mathscr{L}_{\lambda} \cos(\varepsilon_b) d\mathscr{A}_b d\Omega_b d\lambda =
+\mathscr{L}_{\lambda,b} \cos(\varepsilon_g) d\mathscr{A}_g d\Omega_g d\lambda =
+d^3\Phi_{\lambda,b}
+\end{split} \tag{12}\]</span></span></p>
+<!-- \input{C:/Users/eugenio-SurfPro/Desktop/Physics_Explorations/Physics_incision/Physics_incisions_content/Physics_Particle.tex} -->
+<p>Energy Density w and Pressure <span class="math inline">\(P\)</span>, Temperature <span class="math inline">\(T\)</span>, Volume <span class="math inline">\(V\)</span>, inner Energy <span class="math inline">\(U\)</span>, Entropy density <span class="math inline">\(s\)</span>, Radiance <!-- \footnote{Strahldichte}  --></p>
+<p><span class="math inline">\(\mathscr{L}_B\)</span>:</p>
+<p><span id="eq-blackbody_engergydensity-1"><span class="math display">\[\begin{split} &amp;
+w_B =
+\frac{\mathscr{L}_B}{c} \int\limits_0^{4\pi} d\Omega =
+\frac{4\pi}{c} \cdot \mathscr{L}_B =
+\frac{4}{c} \cdot \mathscr{M}_B =
+2 \cdot 2\pi \cdot \frac{\mathscr{L}_B}{c}
+\stackrel{oriented}{=}
+P_{EM}
+\stackrel{unoriented}{=}
+3 w_{EM} =
+3 \left( \varepsilon_0 \varepsilon_r \mathscr{E}^2 \right) =
+3 P_B =
+3 \left( - \frac{dW}{dV} \right)_B =
+3 \left( - \frac{d(F \cdot x)}{dV} \right)_B =
+3 \left( - \frac{m}{V} \cdot x \cdot \ddot{x} \right)_B =
+T \frac{\partial P}{\partial T} - P =
+\frac{\partial U}{\partial V} =
+aT^4 =
+\frac{3}{4} T \cdot s_B
+\end{split} \tag{13}\]</span></span></p>
+<p><span id="eq-blackbody_engergydensity-2"><span class="math display">\[\begin{split} &amp;
+w_{\lambda,B}
+\stackrel{continuum}{=}
+- \frac{dn}{d\lambda} \overline{W} = \frac{8\pi}{\lambda^4}kT
+\stackrel{quantum}{=}
+\frac{8\pi hc}{\lambda^5} \frac{1}{e^{\frac{hc}{kT}}-1} =
+8\pi h \nu \frac{1}{\lambda^4} \frac{1}{e^{\frac{hc}{kT}}-1}
+\end{split} \tag{14}\]</span></span></p>
+<p><span id="eq-blackbody_engergydensity-3"><span class="math display">\[\begin{split} &amp;
+w_{\nu,B}
+\stackrel{continuum}{=}
+\frac{dn}{d\nu} \overline{W} = \frac{8\pi\nu^2}{c^3}kT
+\stackrel{quantum}{=}
+\frac{8\pi h\nu^3}{c^3} \frac{1}{e^{\frac{hc}{kT}}-1} =
+8\pi h \left(\frac{1}{\lambda}\right)^3 \frac{1}{e^{\frac{hc}{kT}}-1}
+\end{split} \tag{15}\]</span></span></p>
+<!-- \index{Radiant Exitance} -->
+<p>where Radiant Exitance (Emittance) <!-- \footnote{spezifische Ausstrahlung}  --> <span class="math inline">\(\mathscr{M}_B = \frac{d\Phi}{dA_g} = \sigma T^4\)</span> and proportionality constants:</p>
+<p><span class="math inline">\(a = \frac{2^3}{3\cdot5} \frac{\pi^5 k^4}{h^3 c^3} = 7.5657 \cdot 10^{-16}Jm^{-3}K^{-4}\)</span> (<span class="math inline">\(a\)</span> = constant from integration)</p>
+<p><span class="math inline">\(\sigma = \frac{1}{4} \cdot a \cdot c = \frac{2}{3\cdot5} \frac{\pi^5 k^4}{h^3 c^3}  = 5.6704 \cdot 10^{-8}Wm^{-2}K^{-4}\)</span> (<span class="math inline">\(c\)</span> = light speed)</p>
+<p><span id="eq-radiation_heat_00"><span class="math display">\[\begin{split} &amp;
+\frac{d}{d\Omega} P_{EM}
+\stackrel{oriented}{=}
+\frac{d}{d\Omega} w_B =
+\frac{\mathscr{L}_B}{c}
+\end{split} \tag{16}\]</span></span></p>
+<p>Blackbody Entropy Density <span class="math inline">\(s_B = \frac{4}{3} aT^4\)</span></p>
+<p>Blackbody Entropy <span class="math inline">\(S_B = \frac{4}{3} aVT^3\)</span></p>
+<p>Blackbody Inner Energy <span class="math inline">\(U_B = aVT^4\)</span></p>
+<p>Blackbody Pressure <span class="math inline">\(P_B = \frac{1}{3} aT^4 \stackrel{unoriented}{=} \frac{1}{3} w_B\)</span></p>
 
 
 

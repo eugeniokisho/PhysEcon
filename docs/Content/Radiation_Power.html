@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>optimization – PHYSECON</title>
+<title>radiation_power – PHYSECON</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -366,7 +366,7 @@ window.Quarto = {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../Content/2pi.html">Physics Explorations</a></li><li class="breadcrumb-item"><a href="../Content/Radiation_Power.html">Radiation Power</a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -588,7 +588,7 @@ window.Quarto = {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../Content/Radiation_Power.html" class="sidebar-item-text sidebar-link">
+  <a href="../Content/Radiation_Power.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text">Radiation Power</span></a>
   </div>
 </li>
@@ -810,119 +810,59 @@ window.Quarto = {
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
         
-    <div class="quarto-alternate-formats"><h2>Other Formats</h2><ul><li><a href="optimization.pdf"><i class="bi bi-file-pdf"></i>PDF</a></li></ul></div><div class="quarto-other-links"><h2>Other Links</h2><ul><li><a href="https://quarto.org/docs/output-formats/html-basics.html"><i class="bi bi-link-45deg"></i>see also</a></li></ul></div></div>
+    <div class="quarto-alternate-formats"><h2>Other Formats</h2><ul><li><a href="Radiation_Power.pdf"><i class="bi bi-file-pdf"></i>PDF</a></li></ul></div><div class="quarto-other-links"><h2>Other Links</h2><ul><li><a href="https://quarto.org/docs/output-formats/html-basics.html"><i class="bi bi-link-45deg"></i>see also</a></li></ul></div></div>
 <!-- main -->
-<main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block"></header>
+<main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../Content/2pi.html">Physics Explorations</a></li><li class="breadcrumb-item"><a href="../Content/Radiation_Power.html">Radiation Power</a></li></ol></nav></header>
 
 
 
 
 
-Framing contracts and jurisdiction ahead to match <span class="math inline">\(p = \text{"Economy Funds"}\)</span> and <span class="math inline">\(v = \text{"Economy Velocity"}\)</span> that can be modelled with typical approaches for fuction <span class="math inline">\(z = \text{"arrival state"}\)</span> depending on <span class="math inline">\(x = \text{"starting state"}\)</span>, so that “work” <span class="math inline">\(W = F \cdot r =  F \cdot (z - x)\)</span>:
-<style>
-td, th {
-   border: none!important;
-}
-</style>
-<div id="tbl-modeling" class="quarto-float quarto-figure quarto-figure-center anchored">
-<figure class="quarto-float quarto-float-tbl figure">
-<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-modeling-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Table&nbsp;1: Modelling Functions
-</figcaption>
-<div aria-describedby="tbl-modeling-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<table class="caption-top table">
-<colgroup>
-<col style="width: 23%">
-<col style="width: 27%">
-<col style="width: 49%">
-</colgroup>
-<thead>
-<tr class="header">
-<th style="text-align: left;">Type</th>
-<th style="text-align: left;">Model</th>
-<th style="text-align: left;">Linearisation</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td style="text-align: left;">Linear</td>
-<td style="text-align: left;"><span class="math inline">\(z = a + bx\)</span></td>
-<td style="text-align: left;"><span class="math inline">\(z = a + bx\)</span></td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">Gemetric</td>
-<td style="text-align: left;"><span class="math inline">\(z = a \cdot x^b\)</span></td>
-<td style="text-align: left;"><span class="math inline">\(\log z = \log a + b \cdot (\log x)\)</span></td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">Exponential deca.</td>
-<td style="text-align: left;"><span class="math inline">\(z = a \cdot b^x\)</span></td>
-<td style="text-align: left;"><span class="math inline">\(\log z = \log a + (\log b) \cdot x\)</span></td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">Exponential nat.</td>
-<td style="text-align: left;"><span class="math inline">\(z = a \cdot e^{bx}\)</span></td>
-<td style="text-align: left;"><span class="math inline">\(\ln z = \ln a + bx\)</span></td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">Periodical</td>
-<td style="text-align: left;"></td>
-<td style="text-align: left;"></td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">Polynomial</td>
-<td style="text-align: left;"></td>
-<td style="text-align: left;"></td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">Taylor</td>
-<td style="text-align: left;"></td>
-<td style="text-align: left;"></td>
-</tr>
-</tbody>
-</table>
-</div>
-</figure>
-</div>
-<p><br>
-<br>
-Linear optimization to achieve target states “<span class="math inline">\(z, h\)</span>”:</p>
-<ol type="1">
-<li><p>Oneness situaiton modelling:</p>
-<p>minimize efforts = <span class="math inline">\(z\)</span> or maximizie return = <span class="math inline">\(z\)</span></p></li>
-</ol>
-<p><span id="eq-situationopt"><span class="math display">\[\begin{split} &amp;
-\text{target:}            \hphantom{min.nstraints:}     z = c^T \cdot x \\&amp;
-\text{min. constraints:}  \hphantom{max.}               \left[ a_{ki} \right] \cdot x \ge b   \\&amp;
-\text{max. constraints:}  \hphantom{min.}               \left[ a_{ki} \right] \cdot x \le b   \\&amp;
-\text{condition:}         \hphantom{max.raints:}        x \ge 0   \\&amp;
+<p>Radiation Power and Transfer</p>
+<p>Power <span class="math inline">\(\equiv\)</span> Radiant Flux: <!-- \footnote{Strahlungsleistung, Strahlungsfluss, Energiestrom}
+\index{Power}   \index{Flux} --></p>
+<p><span id="eq-radiationpower-1"><span class="math display">\[\begin{split} &amp;
+\Phi =
+\frac{d}{dt}W =
+|\frac{1}{\mu_0}(\mathscr{E} \times \mathscr{B} ) | =
+| \mathscr{S} | =
+\oint\limits_A\, \mathscr{S}\, d\vec{A}
 \end{split} \tag{1}\]</span></span></p>
-<ol start="2" type="1">
-<li><p>Duality situation modelling:</p>
-<p>minimize efforts = <span class="math inline">\(z\)</span> and maximize return = <span class="math inline">\(h\)</span></p></li>
-</ol>
-<p><span id="eq-situationdual"><span class="math display">\[\begin{split} &amp;
-\text{target min.:}         \hphantom{ andints:}      z = c^T \cdot x     \\&amp;
-\text{min. constraints:}    \hphantom{ and}           \left[ a_{ki} \right] \cdot x \ge b   \\&amp;
-\text{condition:}           \hphantom{ andraints:}    x \ge 0       \\&amp;
-\textit{ and}    \\&amp;
-\text{target max.:}         \hphantom{ andints:}      h = b^T \cdot y \\&amp;
-\text{max. constraints:}    \hphantom{ and}           \left[ a_{ki} \right]^T \cdot y \le c   \\&amp;
-\text{condition:}           \hphantom{ andraints:}    y \ge 0         \\&amp;
+<p><span class="math inline">\(dW \equiv\)</span> Radiant Energy, <span class="math inline">\(W \equiv\)</span> Work <!-- \index{Energy} --></p>
+<p><span class="math inline">\(\mathscr{S} \equiv\)</span> Poynting-Vector, <span class="math inline">\(A \equiv\)</span> radiant surface area, <span class="math inline">\(d\vec{A} \perp dA\)</span> <!-- index{Poynting-Vector} --></p>
+<p>Flux Density <span class="math inline">\(\equiv\)</span> Radiant Intensity (ray beam angular from source at distance <span class="math inline">\(g\)</span>): <!-- \footnote{Strahlstärke, Flussdichte}
+\index{Flux Density} \index{Intensity} --></p>
+<p><span class="math inline">\(\mathscr{J} = \frac{d\Phi}{d\Omega_g}\)</span></p>
+<p><span class="math inline">\(\mathscr{J}_{\lambda} = \frac{c}{\lambda^2} \mathscr{J}_{\nu}\)</span></p>
+<p><span id="eq-radiationpower-2"><span class="math display">\[\begin{split} &amp;
+d\mathscr{J} = \frac{d^2\Phi}{d\Omega_g} =
+\frac{d^2\Phi}{ \frac{dA_b \cos(\varepsilon_b)}{R^2} } =
+\mathscr{L} dA_g \cos(\varepsilon_g)
 \end{split} \tag{2}\]</span></span></p>
-<ol start="3" type="1">
-<li>Normalization:</li>
-</ol>
-<p><span id="eq-optnorm"><span class="math display">\[\begin{split} &amp;
-\text{target:}              \hphantom{min.nstraints:}      z = c^T \cdot x \\&amp;
-\text{min. constraints:}    \hphantom{max.}    \left( \left[ a_{ki} \right] - x_{n+k} \right) \cdot x = b   \\&amp;
-\text{max. constraints:}    \hphantom{min.}    \left( \left[ a_{ki} \right] + x_{n+k} \right) \cdot x = b   \\&amp;
-\text{condition:}           \hphantom{max.raints:}    x \ge 0       \\&amp;
+<p>where Radiance <span class="math inline">\(\mathscr{L}\)</span> = const.</p>
+<p>Irradiance <span class="math inline">\(\equiv\)</span> Impact Intensity (ray beam straight at receiver in distance <span class="math inline">\(b\)</span>): <!-- \footnote{Bestrahlungsstärke}
+\index{Irradiance} --></p>
+<p><span class="math inline">\(\mathscr{I} = \frac{d\Phi}{dA_b} = \mathscr{J} \frac{\cos(\varepsilon_b)}{R^2} = \frac{d\mathscr{H}}{dt}\)</span></p>
+<p>Radiant Exposure <span class="math inline">\(\equiv\)</span> Action: <!-- \footnote{Bestrahlung, Strahlung-Wirkung auf Fläche A}
+\index{Radiant Exposure} --></p>
+<p><span class="math inline">\(\mathscr{H} = \int\limits_{t_1}^{t_2}\, \mathscr{I}(t)\, dt\)</span></p>
+<p>Radiant Exitance <span class="math inline">\(\equiv\)</span> Radiant Emittance:<br>
+<!-- footnote{spezifische Ausstrahlung, Leuchtkraft}
+\index{Exitance} \index{Emittance} --></p>
+<p><span class="math inline">\(\mathscr{M} = \frac{d\Phi}{dA_g}\)</span></p>
+<p>Radiance <span class="math inline">\(\equiv\)</span> Radiant Density (Apparency, Brightness): <!-- \footnote{Strahldichte, Helligkeit, prop. Leistung, $\rightarrow$ Strahlungsfeld}
+\index{Radiance} \index{Radiant Density} --></p>
+<p>Emissity <!-- \footnote{Emissionsvermögen}  --> <span class="math inline">\(\equiv \mathscr{L}_g\)</span> <!-- \index{Emissity} --></p>
+<p>Appearence Areas: <span class="math inline">\(dA_g \cos(\varepsilon_g)\)</span> and <span class="math inline">\(dA_b \cos(\varepsilon_b)\)</span> <!-- \index{Appearence} --></p>
+<p><span id="eq-radiationpower-3"><span class="math display">\[\begin{split} &amp;
+\mathscr{L} =
+\frac{d\mathscr{J}}{dA_g \cdot \cos(\varepsilon_g)} =
+\frac{1}{dA_g \cos(\varepsilon_g)} \frac{d^2\Phi}{d\Omega_g} =
+\frac{1}{dA_b \cos(\varepsilon_b)} \frac{d^2\Phi}{d\Omega_b} =
+\frac{c}{4\pi} w_{EM}
 \end{split} \tag{3}\]</span></span></p>
-<ol start="4" type="1">
-<li>Solution with <a href="https://cbom.atozmath.com/CBOM/Simplex.aspx?q=sm">Simplex algorithm</a></li>
-</ol>
-<p>multilinear and exponential models …</p>
+<p><span class="math inline">\(\mathscr{L} = const.\)</span>: diffused emission, reflection, brightness, rough no mirroring surface <!-- \footnote{"Lambert's cosine law"}  --> <!-- \index{Lambert} --> …</p>
+<p><span class="math inline">\(\mathscr{L} \neq\)</span> const.: radiation transfer, no diffusion, apparent, smooth surface mirroring …</p>
 
 
 
